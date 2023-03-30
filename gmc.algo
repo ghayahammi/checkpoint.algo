@@ -1,0 +1,36 @@
+
+ALGORITHM tab 
+
+VAR
+  set1,set2: array_of INTEGER[100]
+  s,i,j:INTEGER
+  found: BOOLEAN
+BEGIN
+  for i from 0 to n-1 DO
+  found:false
+  for j from 0 to n2-1 DO 
+  IF (set1[i]= set2[j]) then
+  found:true
+  break
+  END_IF
+  END_FOR
+IF (found=false) THEN
+  s:=s+set1 [i]
+END_IF
+END_FOR
+ for j from 0 to n2-1 DO
+  found:false 
+  for i from 0 to n-1 DO
+  IF (set2 [j]= set1 [i]) then 
+  found: true 
+  break
+  END_IF
+  END_FOR
+  if(found=false) then
+  s:= s+set2[j]
+
+END_IF
+END_FOR
+
+
+END
